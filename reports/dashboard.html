@@ -1,0 +1,102 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Client Portfolio Dashboard</title>
+<style>
+@page { size: A4 landscape; margin: 12mm; }
+* { box-sizing:border-box; } body { margin:0; background:#f5f7fb; color:#18233a; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+.page { max-width:1200px; margin:0 auto; padding:28px 32px; }
+.top { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #dce2ee; padding-bottom:16px; }
+h1 { margin:0; font-size:30px; letter-spacing:-.03em; } .kicker { color:#4f46e5; text-transform:uppercase; letter-spacing:.13em; font-size:11px; font-weight:800; margin-bottom:7px; }
+.note { color:#63708a; font-size:12px; max-width:380px; text-align:right; line-height:1.5; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0; } .card { background:white; border:1px solid #e2e7f0; border-radius:13px; padding:16px 18px; box-shadow:0 5px 15px rgba(30,50,90,.04); }
+.eyebrow { font-size:12px; font-weight:800; color:#46526a; } .big { font-size:30px; font-weight:800; margin-top:9px; } .sub,.mini { color:#6b7790; font-size:12px; } .mini { margin-top:9px; }
+.grid { display:grid; grid-template-columns:1.12fr .88fr; gap:16px; align-items:start; } .panel { background:white; border:1px solid #e2e7f0; border-radius:13px; padding:15px; margin-bottom:16px; } .panel h2 { font-size:14px; margin:0 0 12px; }
+img { max-width:100%; display:block; } table { width:100%; border-collapse:collapse; font-size:11px; } th { text-align:left; color:#65718a; font-weight:700; border-bottom:1px solid #e2e7f0; padding:7px 6px; } td { border-bottom:1px solid #edf0f5; padding:7px 6px; } td:not(:first-child), th:not(:first-child) { text-align:right; } .foot { color:#768198; font-size:10px; line-height:1.4; margin-top:8px; }
+</style></head><body><main class="page">
+<div class="top"><div><div class="kicker">Wealth management · illustrative analysis</div><h1>Client Portfolio & Macro Scenario Dashboard</h1></div><div class="note">Monthly total-return proxies · Jan 2014 to Sep 2026<br>For education only · not investment advice</div></div>
+<section class="cards"><div class="card"><div class="eyebrow">Growth</div><div class="big">9.8%</div><div class="sub">annualised return</div><div class="mini">9.1% vol · -9.0% max drawdown</div></div><div class="card"><div class="eyebrow">Balanced</div><div class="big">6.8%</div><div class="sub">annualised return</div><div class="mini">6.8% vol · -10.5% max drawdown</div></div><div class="card"><div class="eyebrow">Capital Preservation</div><div class="big">4.2%</div><div class="sub">annualised return</div><div class="mini">5.8% vol · -12.8% max drawdown</div></div></section>
+<div class="grid"><div><div class="panel"><h2>Portfolio paths</h2><img src="figures/portfolio_growth.png" alt="Portfolio growth chart"></div><div class="panel"><h2>Risk / return</h2><img src="figures/risk_return.png" alt="Risk return chart"></div></div>
+<div><div class="panel"><h2>Macro stress test · estimated one-period impact</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Balanced</th>
+      <th>Capital Preservation</th>
+      <th>Growth</th>
+    </tr>
+    <tr>
+      <th>Scenario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Equities -20%</th>
+      <td>-7.0%</td>
+      <td>-2.6%</td>
+      <td>-12.0%</td>
+    </tr>
+    <tr>
+      <th>GBP weaker 10%</th>
+      <td>4.5%</td>
+      <td>3.5%</td>
+      <td>6.5%</td>
+    </tr>
+    <tr>
+      <th>Inflation higher</th>
+      <td>-3.7%</td>
+      <td>-3.6%</td>
+      <td>-3.1%</td>
+    </tr>
+    <tr>
+      <th>Rates +100bp</th>
+      <td>-3.2%</td>
+      <td>-3.7%</td>
+      <td>-2.3%</td>
+    </tr>
+    <tr>
+      <th>Rates -100bp</th>
+      <td>3.2%</td>
+      <td>3.7%</td>
+      <td>2.3%</td>
+    </tr>
+  </tbody>
+</table><div class="foot">Rate shocks use estimated gilt duration and a 4.5-year investment-grade bond assumption. Inflation and FX shocks are directional assumptions.</div></div><div class="panel"><h2>Rate sensitivity on a hypothetical £1m account</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gilt_modified_duration_years</th>
+      <th>gilt_dv01_gbp_per_bp</th>
+      <th>estimated_total_rate_dv01_gbp_per_bp</th>
+    </tr>
+    <tr>
+      <th>portfolio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Growth</th>
+      <td>6.476911</td>
+      <td>64.769112</td>
+      <td>109.769112</td>
+    </tr>
+    <tr>
+      <th>Balanced</th>
+      <td>6.476911</td>
+      <td>161.922780</td>
+      <td>251.922780</td>
+    </tr>
+    <tr>
+      <th>Capital Preservation</th>
+      <td>6.476911</td>
+      <td>226.691892</td>
+      <td>339.191892</td>
+    </tr>
+  </tbody>
+</table><div class="foot">DV01 is the approximate £ change for a 1bp move, based on target weights; it is not a live risk number.</div></div><div class="panel"><h2>Diversification check</h2><img src="figures/correlation_heatmap.png" alt="Correlation heatmap"></div></div></div>
+<div class="foot">Sources: Yahoo Finance adjusted monthly closes for proxy ETFs and GBP/USD; UK 10-year gilt yield is a transparent demonstration proxy included in the repository. See README and memo for methodology and suitability caveats.</div>
+</main></body></html>
