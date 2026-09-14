@@ -1,9 +1,0 @@
-sleeve,proxy,source,notes
-UK gilts,IGLT.L,https://finance.yahoo.com/quote/IGLT.L/history,GBP-listed adjusted close proxy
-Global equities,ACWI,https://finance.yahoo.com/quote/ACWI/history,USD adjusted close converted to GBP
-UK equities,VUKE.L,https://finance.yahoo.com/quote/VUKE.L/history,GBP-listed adjusted close proxy
-Investment-grade bonds,SLXX.L,https://finance.yahoo.com/quote/SLXX.L/history,GBP-listed sterling corporate-bond adjusted close proxy
-Cash,BIL,https://finance.yahoo.com/quote/BIL/history,USD T-bill adjusted close converted to GBP
-Gold,GLD,https://finance.yahoo.com/quote/GLD/history,USD gold adjusted close converted to GBP
-FX exposure,GBPUSD=X,https://finance.yahoo.com/quote/GBPUSD=X,USD per GBP inverted to express USD versus GBP
-UK 10Y gilt yield,demonstration proxy,https://www.bankofengland.co.uk/boeapps/database,Transparent monthly anchors included for method demonstration; replace before real use
