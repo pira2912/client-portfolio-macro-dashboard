@@ -1,0 +1,6 @@
+scenario,Balanced,Capital Preservation,Growth
+Equities -20%,-0.070000,-0.026000,-0.120000
+GBP weaker 10%,0.045000,0.035000,0.065000
+Inflation higher,-0.036500,-0.036400,-0.030500
+Rates +100bp,-0.032192,-0.036519,-0.022977
+Rates -100bp,0.032192,0.036519,0.022977

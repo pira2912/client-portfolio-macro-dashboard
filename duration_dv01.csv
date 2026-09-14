@@ -1,0 +1,4 @@
+portfolio,gilt_weight,gilt_market_value_gbp,gilt_modified_duration_years,gilt_dv01_gbp_per_bp,ig_duration_assumption_years,estimated_total_rate_dv01_gbp_per_bp
+Growth,0.1000,100000.0000,6.4769,64.7691,4.5000,109.7691
+Balanced,0.2500,250000.0000,6.4769,161.9228,4.5000,251.9228
+Capital Preservation,0.3500,350000.0000,6.4769,226.6919,4.5000,339.1919
