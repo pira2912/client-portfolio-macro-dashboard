@@ -56,21 +56,3 @@ Gilt modified duration comes from the regression of monthly gilt returns on chan
 
 Stress tests are one-period directional shocks, not forecasts. They isolate the requested risks and leave out convexity, spread changes, taxes, fees, trading costs and manager skill.
 
-## Important limitations
-
-This is an educational framework, not regulated investment advice. The allocations are fictional. A real suitability assessment would need the client's objectives, spending and withdrawal schedule, income stability, liabilities, cash reserve, tax position, existing holdings, loss capacity, loss tolerance, investment experience, horizon, liquidity constraints, ESG preferences, currency needs, concentration risks and restrictions.
-
-## Suggested GitHub presentation
-
-Start with `reports/dashboard.html`, then link to `reports/client_memo.html`. The separation between data ingestion, analytics and presentation makes the project easy to review. it also shows the part that matters in a client conversation: the same market information leads to different choices for different people.
-
-## CV-ready summary
-
-**Client Portfolio & Macro Scenario Dashboard | Python**
-
-- Built a suitability-led portfolio framework for three hypothetical client profiles, combining UK gilts, equities, bonds, cash, gold and FX using historical risk and correlation data.
-- Stress-tested allocations under rate, inflation, equity and currency shocks, estimated gilt duration and DV01 exposure, and translated the results into a client-style memo covering trade-offs and liquidity needs.
-
-## License
-
-MIT. Market data remains subject to the terms of its source provider.
